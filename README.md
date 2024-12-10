@@ -1,59 +1,54 @@
-# AngularAlbum
+# Angular Album
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+Este proyecto es una aplicación Angular para gestionar álbumes musicales. Permite crear, editar, ver y eliminar álbumes, así como agregar comentarios a los álbumes.
 
-## Development server
+## Requisitos
 
-To start a local development server, run:
+- Node.js (versión 23 o superior)
+- Angular CLI (versión 12 o superior)
 
-```bash
-ng serve
-```
+## Instalación
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+1. Clona el repositorio:
 
-## Code scaffolding
+   `
+   git clone https://github.com/freiman-uribe/angular-album.git
+   cd angular-album`
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+2. Instala las dependencias:
 
-```bash
-ng generate component component-name
-```
+`npm install`
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Ejecución
 
-```bash
-ng generate --help
-```
+Para ejecutar la aplicación en modo de desarrollo, utiliza el siguiente comando:
 
-## Building
+`ng serve`
 
-To build the project run:
+Luego, abre tu navegador y navega a http://localhost:4200/.
 
-```bash
-ng build
-```
+## Estructura del Proyecto
+- src/app/album-create/album-create.component.ts: Componente para crear y editar álbumes.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- src/app/album-comment/album-comment.component.ts: Componente para dejar un comentario al álbum.
 
-## Running unit tests
+- src/app/album-list/album-list.component.ts: Componente para listar los álbumes.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- src/app/album-detail/album-detail.component.ts: Componente para ver los detalles de un álbum.
 
-```bash
-ng test
-```
+- src/app/models/album.models.ts: 
+Modelos de la informacion que se espera de los album.
 
-## Running end-to-end tests
+- src/app/services/album.service.ts: Servicio para gestionar las operaciones CRUD de los álbumes.
 
-For end-to-end (e2e) testing, run:
+## Funcionalidades
 
-```bash
-ng e2e
-```
+- Crear Álbum: Permite crear un nuevo álbum con nombre, cubierta, fecha de lanzamiento, descripción, género y disquera.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- Editar Álbum: Permite editar un álbum existente.
 
-## Additional Resources
+- Ver Álbum: Permite ver los detalles de un álbum, incluyendo sus comentarios y canciones.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Eliminar Álbum: Permite eliminar un álbum.
+
+- Agregar Comentarios: Permite agregar comentarios a un álbum.
