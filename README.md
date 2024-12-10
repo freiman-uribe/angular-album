@@ -25,6 +25,10 @@ Para ejecutar la aplicación en modo de desarrollo, utiliza el siguiente comando
 
 `ng serve`
 
+Para ejecutar el test de la aplicación, utiliza el siguiente comando:
+
+`ng test`
+
 Luego, abre tu navegador y navega a http://localhost:4200/.
 
 ## Estructura del Proyecto
