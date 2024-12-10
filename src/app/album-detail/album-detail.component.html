@@ -1,0 +1,47 @@
+<div *ngIf="album">
+    <div class="album-detail">
+        <div class="album-info">
+            <div class="album-cover-container">
+                <img src="/assets/image/disco.png" alt="Disco" class="disco-image">
+                <img [src]="album.cover" alt="{{ album.name }}" class="album-cover">
+            </div>
+            <div class="album-details">
+                <h2>{{ album.name }}</h2>
+                <p><strong>Fecha de lanzamiento:</strong> {{ album.releaseDate | date }}</p>
+                <mat-chip-set>
+                    <mat-chip class="chip">{{ album.genre }}</mat-chip>
+                    <mat-chip class="chip">{{ album.recordLabel }}</mat-chip>
+                </mat-chip-set>
+                <p><strong>Descripción:</strong> {{ album.description }}</p>
+            </div>
+        </div>
+
+        <ng-container *ngIf="album.tracks && album.tracks.length > 0">
+            <h3>Canciones</h3>
+            <mat-card class="tracks-card">
+                <div class="tracks-list">
+                    <div *ngFor="let track of album.tracks; let i = index" class="track-item">
+                        <p>{{ i + 1 }}. {{ track.name }} ({{ track.duration }})</p>
+                    </div>
+                </div>
+            </mat-card>
+        </ng-container>
+    </div>
+
+    <div class="comment-detail">
+        <h3>Comentarios</h3>
+        <mat-card class="comments-card">
+            <div class="comments-list">
+                <ng-container *ngIf="album.comments && album.comments.length > 0; else noComments">
+                    <mat-card *ngFor="let comment of album.comments" class="comment-item">
+                        <p><span *ngFor="let heart of getHearts(comment.rating)">{{ heart }}</span></p>
+                        <p>{{ comment.description }}</p>
+                    </mat-card>
+                </ng-container>
+                <ng-template #noComments>
+                    <p class="no-comments-message">No hay comentarios disponibles.</p>
+                </ng-template>
+            </div>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<mat-card class="comment-card">
+    <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+            <mat-label>Descripción</mat-label>
+            <textarea matInput id="description" formControlName="description" required></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Calificación</mat-label>
+            <mat-select id="rating" formControlName="rating" required>
+                <mat-option *ngFor="let rating of ratings" [value]="rating">{{ rating }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="commentForm.invalid">Agregar
+            Comentario</button>
+    </form>
+</mat-card>

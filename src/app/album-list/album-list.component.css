@@ -1,0 +1,38 @@
+.album-list-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+}
+
+th.mat-header-cell {
+    white-space: nowrap;
+}
+
+td.mat-cell {
+    white-space: nowrap;
+}
+
+.actions {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    margin-right: 10px;
+}
+
+mat-form-field {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.no-data-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #757575;
+}

@@ -1,0 +1,112 @@
+.album-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.comment-detail {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.album-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.album-cover-container {
+    position: relative;
+    width: 40%;
+    height: 300px;
+    margin-right: 20px;
+}
+
+.disco-image {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -120px;
+    z-index: 1;
+}
+
+.album-cover {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.album-details {
+    flex: 1;
+    width: 50%;
+}
+
+.chip {
+    margin: 5px;
+    border-radius: 8px;
+}
+
+.tracks-card {
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.tracks-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.track-item {
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+}
+
+.comments-card {
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.comments-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comment-item {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.comment-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.no-comments-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #757575;
+}
