@@ -21,8 +21,8 @@ describe('AlbumCreateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AlbumCreateComponent],
       imports: [
+        AlbumCreateComponent,
         ReactiveFormsModule,
         HttpClientTestingModule,
         MatInputModule,

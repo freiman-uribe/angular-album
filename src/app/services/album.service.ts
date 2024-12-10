@@ -7,7 +7,8 @@ import { Album } from '../models/album.model';
   providedIn: 'root',
 })
 export class AlbumService {
-  private apiUrl = 'https://backvynils-q6yc.onrender.com/albums';
+  // private apiUrl = 'https://backvynils-q6yc.onrender.com/albums';
+  private apiUrl = 'http://149.56.23.23:3000/albums';
 
   constructor(private http: HttpClient) {}
 
