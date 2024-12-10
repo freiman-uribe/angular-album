@@ -1,6 +1,10 @@
 .album-list-container {
     width: 100%;
     overflow-x: auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
 table {
@@ -30,24 +34,16 @@ mat-form-field {
 button {
     margin-right: 10px;
     padding: 8px 16px;
-    border-radius: 8px;
+    border-radius: 12px;
     text-transform: none;
     font-weight: 500;
-}
-
-button.mat-button {
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    color: #333;
-}
-
-button.mat-button:hover {
-    background-color: #e0e0e0;
+    border: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
 }
 
 button.mat-button.color-primary {
     background-color: #1976d2;
-    color: #fff;
 }
 
 button.mat-button.color-primary:hover {
@@ -56,7 +52,6 @@ button.mat-button.color-primary:hover {
 
 button.mat-button.color-accent {
     background-color: #ff4081;
-    color: #fff;
 }
 
 button.mat-button.color-accent:hover {
@@ -65,7 +60,6 @@ button.mat-button.color-accent:hover {
 
 button.mat-button.color-warn {
     background-color: #f44336;
-    color: #fff;
 }
 
 button.mat-button.color-warn:hover {
