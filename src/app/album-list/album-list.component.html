@@ -4,7 +4,7 @@
             <mat-label>Filtrar por nombre</mat-label>
             <input matInput (keyup)="applyFilter($event)" placeholder="Buscar álbum">
         </mat-form-field>
-        <button mat-raised-button color="primary" (click)="addAlbum()">Agregar Álbum</button>
+        <button mat-button color="primary" (click)="addAlbum()">Agregar Álbum</button>
     </div>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
         <ng-container matColumnDef="name">
@@ -45,9 +45,7 @@
                 <button mat-button color="accent" (click)="viewAlbum(album.id)">Ver Detalle</button>
                 <button mat-button color="accent" (click)="addComment(album.id)">Agregar Comentario</button>
                 <button mat-button color="primary" (click)="editAlbum(album.id)">Editar</button>
-                <button mat-icon-button color="warn" (click)="deleteAlbum(album.id)">
-                    <mat-icon>delete</mat-icon>
-                </button>
+                <button mat-button color="warn" (click)="deleteAlbum(album.id)">Eliminar</button>
             </td>
         </ng-container>
 
